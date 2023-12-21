@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 jardas</title>
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
+
+@font-face {
+  font-family: BloodVaca;
+  src: url(bloodcrow.ttf);
+}
+
+    img {
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 50px;
+      font-family: BloodVaca;
+      margin-bottom: 200px;
+    }
+
+    input {
+      padding: 5px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 4px;
+    }
+  </style>
+</head>
+<body>
+  <img src="Screenshot_20231120-182508_YouTube.png" alt="Gatito de guerra">
+  <p>abra os olhos</p>
+  
+  <label for="resposta"><i>Resposta:</i></label>
+  <input type="text" id="resposta" name="resposta">
+<br>
+  <button onclick="verificarResposta()">Enviar</button>
+
+  <script>
+    function verificarResposta() {
+      var respostaInserida = document.getElementById("resposta").value.toLowerCase();
+      var respostaCorreta = "gato"; 
+
+      if (respostaInserida === respostaCorreta) {
+        window.location.href = "Socorro2.html"; 
+      } else {
+        alert("Resposta incorreta, Desista agora.");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japonesas Gostosas</title>
+  <style>
+    /* Estilo para o corpo da página */
+    body {
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      position: relative;
+    }
+
+    /* Definição da fonte personalizada */
+    @font-face {
+      font-family: BloodVaca;
+      src: url(bloodcrow.ttf);
+    }
+
+    /* Estilo para imagens */
+    img {
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 1vw; /* Espaçamento inferior responsivo */
+    }
+
+    /* Estilo para parágrafos */
+    p {
+      font-size: 7vw; /* Tamanho de fonte responsivo */
+      font-family: BloodVaca;
+      margin-bottom: 40vw; /* Espaçamento inferior responsivo */
+    }
+
+    /* Estilo para rótulos */
+    label {
+      font-size: 3vw;
+      margin-bottom: 1vw; /* Espaçamento inferior responsivo */
+    }
+
+    /* Estilo para campos de entrada de texto */
+    input {
+      padding: 1vw; /* Tamanho de padding responsivo */
+      margin-bottom: 1vw; /* Espaçamento inferior responsivo */
+      width: 30%; /* Largura responsiva */
+      height: 1%; /* Altura responsiva */
+    }
+
+    /* Estilo para botões */
+    button {
+      padding: 1vw; /* Tamanho de padding responsivo */
+    }
+
+    /* Estilo para o ícone de dica */
+    #iconeDica {
+      position: absolute;
+      top: 2vw; /* Posição superior responsiva */
+      right: 2vw; /* Posição direita responsiva */
+      width: 7vw; /* Largura responsiva */
+      height: 7vw; /* Altura responsiva */
+      cursor: pointer;
+    }
+
+    /* Estilo para a caixa de dica */
+    #caixaDica {
+      display: none;
+      position: absolute;
+      top: 12vw; /* Posição superior responsiva */
+      right: 2vw; /* Posição direita responsiva */
+      padding: 2vw; /* Tamanho de padding responsivo */
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1vw; /* Borda responsiva */
+      color: black;
+      font-size: 2.5vw; /* Tamanho de fonte responsivo */
+    }
+  </style>
+</head>
+<body>
+  <!-- Imagem principal -->
+  <img src="IMG-20231219-WA0060.jpg" alt="Gostosas">
+  
+  <!-- Texto principal -->
+  <p>feche os olhos</p>
+  
+  <!-- Rótulo e campo de entrada -->
+  <label for="resposta"><i>Resposta:</i></label>
+  <input type="text" id="resposta" name="resposta">
+  
+  <!-- Botão de envio -->
+  <button onclick="verificarResposta()">Enviar</button>
+
+  <!-- Ícone de Dica e Caixa de Dica -->
+  <img id="iconeDica" src="lâmpada.png" alt="Ícone de Dica" onclick="exibirDica()">
+  <div id="caixaDica">Dica: exemplo</div>
+
+  <script>
+    /* Função para verificar a resposta */
+    function verificarResposta() {
+      var respostaInserida = document.getElementById("resposta").value.toLowerCase(); 
+      var respostaCorreta = "lindas"; 
+
+      if (respostaInserida === respostaCorreta) {
+        window.location.href = "Socorro3"; 
+      } else {
+        alert("Resposta incorreta, Desista agora.");
+      }
+    }
+
+    /* Função para exibir a dica */
+    function exibirDica() {
+      var caixaDica = document.getElementById("caixaDica");
+      caixaDica.style.display = "block";
+      setTimeout(function() {
+        caixaDica.style.display = "none";
+      }, 5000); // Oculta a dica após 5 segundos
+    }
+  </script>
+</body>
+</html>
