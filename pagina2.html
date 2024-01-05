@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PÃ¡gina 2</title>
+</head>
+<body>
+
+  <h2>Texto Recebido:</h2>
+  <p id="textoRecebido"></p>
+
+  <script>
+    // Recuperar o texto do armazenamento local
+    var nome = localStorage.getItem("nome");
+    document.getElementById("textoRecebido").innerText = nome;
+
+    // Redirecionamento para a PÃ¡gina 3 apÃ³s 5 segundos
+    setTimeout(function() {
+      window.location.href = "pagina3.html";
+    }, 5000);
+  </script>
+
+</body>
+</html>

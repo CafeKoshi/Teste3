@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PÃ¡gina Inicial</title>
+</head>
+<body>
+
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" placeholder="Digite seu nome">
+
+  <!-- Adicione um ID ao botÃ£o -->
+  <button id="botaoEnviar">Enviar</button>
+
+  <script>
+    document.getElementById("botaoEnviar").onclick = function() {
+      var nome = document.getElementById("nome").value;
+      // SimulaÃ§Ã£o de envio do texto para a prÃ³xima pÃ¡gina
+      localStorage.setItem("nome", nome);
+      window.location.href = "pagina2.html";
+    }
+  </script>
+
+</body>
+</html>
